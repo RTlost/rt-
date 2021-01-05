@@ -36,7 +36,7 @@ const { get } = require("snekfetch");
 const guild = require("guild");
 const dateFormat = require("dateformat");
 const YouTube = require("simple-youtube-api");
-const youtube = new YouTube("AIzaSyAXaeBh837k38o_lwSADet8UTO7X21DGsY"); //تعديل اساسي سوي اي بي اي جديد
+const youtube = new YouTube("AIzaSyDRJc0_gc99Q5qvo3O7EdqG1JufIs33etI"); //تعديل اساسي سوي اي بي اي جديد
 const hastebins = require("hastebin-gen");
 const getYoutubeID = require("get-youtube-id");
 const yt_api_key = "AIzaSyAXaeBh837k38o_lwSADet8UTO7X21DGsY"; ///تعديل اساسي سوي اي بي اي جديد
@@ -227,7 +227,7 @@ client.on("message", message => {
       .addField("**Channels** : ", `» ${client.channels.size} `, true)
       .addField("**Users** : ", `» ${client.users.size} `, true)
       .addField("**Bot Name** :  ", `» ${client.user.tag} `, true)
-      .addField("**Bot Owner** :  ", `» <@359541019836022784>`, true) // تعديل اساسي غير الايدي لايدي حسابك
+      .addField("**Bot Owner** :  ", `» <@746590642003509300>`, true) // تعديل اساسي غير الايدي لايدي حسابك
       .setImage("")
       .setFooter(message.author.username, message.client.avatarURL);
     message.channel.send(bot);
@@ -1796,6 +1796,25 @@ client.on("message", message => {
   }
 });
 
+client.on("ready", () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+client.on("message", message => {
+  if (message.content === "هلا") {
+    message.channel.send("**:heart:هلابك:heart:**");
+    message.channel.sendFile("");
+  }
+});
+
+client.on("ready", () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+client.on("message", message => {
+  if (message.content === "شلونك") {
+    message.channel.send("**:heart:الحمدلله والله بخير:heart:**");
+    message.channel.sendFile("");
+  }
+});
 ////تعديل غير اساسي
 /// كود اختيار لون
 
