@@ -4010,29 +4010,34 @@ client.on("message", async msg => {
     return queue.connection.dispatcher.end("Skipping ..");
     // }
 
-    // if (!queue.votes) queue.votes = [];
+    if (!queue.votes) queue.votes = [];
 
-    // if (queue.votes.includes(msg.member.id))
-    //  return msg.say(
-    //    `You already voted for skip! ${queue.votes.length}/${req}`
-    //  );
+    if (queue.votes.includes(msg.member.id))
+     return msg.say(
+    //`You already voted for skip! ${queue.votes.length}/${req}`
+     );
 
-    //  queue.votes.push(msg.member.id);
+     queue.votes.push(msg.member.id);
 
-    //  if (queue.votes.length >= req) {
-    //     msg.channel.send("**:notes: Skipped **" + args);
+     if (queue.votes.length >= req) {
+        msg.channel.send("**:notes: Skipped **" + args);
 
-    //     delete queue.votes;
+       delete queue.votes;
 
-    //     return queue.connection.dispatcher.end("Skipping ..");
-    //   }
-    //
-    //  msg.channel.send(
-    //  `**You have successfully voted for skip! ${queue.votes.length}/${req}**`
+       return queue.connection.dispatcher.end("Skipping ..");
+      }
+    
+     msg.channel.send(
+     `**You have successfully voted for skip! ${queue.votes.length}/${req}**`
     // );
-  } else if (cmd === "pause") {
-    let queue = active.get(msg.guild.id);
+     //
+       
+    
+    //   else if (cmd === "pause") {
+    //let queue = active.get(msg.guild.id);
 
+    /*
+    
     let vCh = msg.member.voiceChannel;
 
     if (!vCh || vCh !== msg.guild.me.voiceChannel)
