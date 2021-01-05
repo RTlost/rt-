@@ -3739,6 +3739,7 @@ client.on("message", async msg => {
 
 //// تغير غير اساسي
 ///// كود ميوزك
+//
 
 let cmds = {
   play: { cmd: "play", a: ["p", "شغل"] },
@@ -4030,16 +4031,14 @@ client.on("message", async msg => {
      msg.channel.send(
      `**You have successfully voted for skip! ${queue.votes.length}/${req}**`
     // );
-     //
+     
        
     
-    //   else if (cmd === "pause") {
-    //let queue = active.get(msg.guild.id);
-
-    /*
-    
+     else if (cmd === "pause") {
+    let queue = active.get(msg.guild.id);
+       
     let vCh = msg.member.voiceChannel;
-
+    
     if (!vCh || vCh !== msg.guild.me.voiceChannel)
       return msg.channel.send(`You are not in my voice channel.`);
 
