@@ -1817,7 +1817,7 @@ client.on("message", message => {
 });
 ////تعديل غير اساسي
 /// كود اختيار لون
-
+/*
 client.on("message", message => {
   let args = message.content.split(" ").slice(1);
   if (message.content.split(" ")[0] == prefix + "color") {
@@ -1862,6 +1862,7 @@ client.on("message", message => {
     message.member.addRole(message.guild.roles.find("name", `${args[0]}`));
   }
 });
+*/
 
 ///تعديل اساسي
 ///لو تبي تعطل كود بدون حذفه حط هذي الرموز
@@ -1898,7 +1899,7 @@ client.on("message", message => {
         .setColor("RANDOM")
         .setFooter(`نتمنى لكم الاستمتاع`);
 
-      var channel = member.guild.channels.find(gg => gg.name === "log"); //// تعديل اساسي
+      var channel = member.guild.channels.find(gg => gg.name === "system-log"); //// تعديل اساسي
       if (!channel) return;
       channel.send({ embed: embed });
     });
