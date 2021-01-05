@@ -3889,7 +3889,7 @@ client.on("message", async msg => {
           voiceChannel: voiceChannel,
           connection: null,
           songs: [], ////تعديل غير اساسي
-          volume: 25, //// تعديل درجة الصوت الاساسية
+          volume: 45, //// تعديل درجة الصوت الاساسية
           requester: msg.author,
           playing: true,
           repeating: false
