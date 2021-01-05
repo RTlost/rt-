@@ -4031,10 +4031,8 @@ client.on("message", async msg => {
      msg.channel.send(
      `**You have successfully voted for skip! ${queue.votes.length}/${req}**`
     // );
-     
        
-    
-     else if (cmd === "pause") {
+    else if (cmd === "pause") {
     let queue = active.get(msg.guild.id);
        
     let vCh = msg.member.voiceChannel;
